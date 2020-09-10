@@ -85,10 +85,15 @@ type Mutation {
   createCourse(input: CourseInput!): Course
   "Edit one course"
   editCourse(_id: ID!, input: CourseEditInput!): Course
+  "Delete a course"
+  deleteCourse(_id: ID!): Boolean
   "Create a new student"
   createPerson(input: PersonInput!): Person
   "Edit one person"
   editPerson(_id: ID!, input: PersonEditInput!): Person
+  "Delete a person"
+  deletePerson(_id: ID!): Boolean
   "Add a person in a course"
   addPerson(courseID: ID!, studentID: ID!): Course
+
 }
